@@ -54,3 +54,15 @@
 // let y = sum*0.1
 // let z = p+y
 // alert(`зарплата соствляет: ${z} доллара`)
+
+
+
+// 11
+
+// let x = prompt('Введите значение');
+// let summa = 0
+// for(let item=0; item<x;item++){
+//     console.log(item);
+//     summa += item
+// }
+// console.log(summa);
