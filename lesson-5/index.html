@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- «функции-стрелки» или «стрелочные функции» (arrow functions), т.к. выглядит следующим образом:
+ let func = (arg1, arg2, ...argN) => expression; -->
+
+    <!-- <script>
+     let sum = (a,b,c) => a+b+c;
+
+     console.log(sum(1,2,3));
+ </script> -->
+
+    <!-- Это создаёт функцию func, которая принимает аргументы arg1..argN, затем вычисляет expression в правой части с их использованием и возвращает результат. -->
+    <!-- <script>
+        // function getRemainder(variable){
+        //     let result;
+        //     if(variable%2==0){
+        //          result = "Число четное";
+        //     }
+        //     else {
+        //         result = "Число нечетное"
+        //     }
+        //     return result
+        // }
+
+        let getRemainder = (variable) => {
+            let result;
+            if (variable % 2 == 0) {
+                result = "Число четное";
+            }
+            else {
+                result = "Число нечетное"
+            }
+            return result
+        }
+
+    </script> -->
+
+
+    <!-- let func = function(arg1, arg2, ...argN) {
+  return expression;
+}; -->
+
+    <!-- Если аргументов нет, круглые скобки будут пустыми, но они должны присутствовать: -->
+
+    <!-- let sayHi = () => alert("Hello!");
+
+sayHi(); -->
+
+    <!-- 
+    Многострочные стрелочные функции
+    Стрелочные функции, которые мы видели до этого, были очень простыми. Они брали аргументы слева от => и вычисляли и
+    возвращали выражение справа.
+
+    Иногда нам нужна более сложная функция, с несколькими выражениями и инструкциями. Это также возможно, нужно лишь
+    заключить их в фигурные скобки. При этом важное отличие – в том, что в таких скобках для возврата значения нужно
+    использовать return (как в обычных функциях). -->
+
+    <!-- let sum = (a, b) => {  // фигурная скобка, открывающая тело многострочной функции
+  let result = a + b;
+  return result; // если мы используем фигурные скобки, то нам нужно явно указать "return"
+};
+
+alert( sum(1, 2) ); //  -->
+
+
+    <!-- Итого
+Стрелочные функции очень удобны для простых действий, особенно для однострочных.
+
+Они бывают двух типов:
+
+Без фигурных скобок: (...args) => expression – правая сторона выражения: функция вычисляет его и возвращает результат. Скобки можно не ставить, если аргумент только один: n => n * 2.
+С фигурными скобками: (...args) => { body } – скобки позволяют нам писать несколько инструкций внутри функции, но при этом необходимо явно вызывать return, чтобы вернуть значение. -->
+    <!-- <script>
+        const numbers = [1,2,3,4,6];
+        let doubleNumbers = numbers.map((item)=>item*2);
+        console.log(numbers);
+    </script> -->
+
+    <!-- const sum = (a, b) => a + b;
+console.log(sum(2, 3)); // 5 -->
+
+    <!-- const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(num => num * 2);
+console.log(doubledNumbers); // выведет [2, 4, 6, 8, 10] -->
+
+    <!-- Массив (Array) – это упорядоченный набор пронумерованных значений. Каждое значение называется элементом массива, а
+    номер элемента в массиве, называется его индексом. Так как JavaScript – это нетипизированный язык, элемент массива
+    может иметь любой тип, причем разные элементы одного массива могут иметь разные типы. Элемент массива может быть
+    даже объектом или другим массивом.
+
+    <script>
+        let arr = [];
+        let arr1 = new Array(5);
+
+        function checkArray(arr) {
+            let result;
+            if (Array.isArray(arr)) {
+                result = true;
+            }
+            else {
+                result = false
+            }
+            return result
+        }
+
+        let users = [{name:"Вася",age:27},{name:"Валентина", age:18}];
+        function isValid(arr){
+            if(checkArray(arr)&&users[0].age>18){
+                console.log("Можно");
+            }
+            else{
+                console.log("нельзя");
+            }
+        }
+        isValid(users);
+
+    </script>
+    Объекты массивов могут создаваться путем присвоения переменным литеральных значений массивов [] либо при помощи
+    оператора new. -->
+
+    <!-- let colors = ["red", "yellow", "green"];  // массив с тремя строками
+    let names = [];  // пустой массив  -->
+
+    <!-- Другой способ создания массива состоит в вызове конструктора Array(). Вызывать конструктор можно тремя разными способами: -->
+
+    <!-- var a = new Array(10);  -->
+
+    <!-- Третий способ очень похож на определение массива с помощью литерала – аналогично создается массив, заполненный указанными значениями. Свойство length массива устанавливается равным количеству элементов, переданных конструктору: -->
+
+    <!-- var arr = Array();
+alert(Array.isArray(arr)); // true  -->
+
+    <!-- Доступ к элементам массива осуществляется с помощью оператора []. Внутри скобок указывается произвольное выражение, имеющее неотрицательное целое значение. Этот синтаксис пригоден как для чтения, так и для записи значения элемента массива. Значения, указанные при создании массива в конструкторе, располагаются в созданном массиве в том порядке, в котором были указаны: -->
+    <script>
+        // let arr = ['первый элемент', 'второй элемент', 'последний элемент'];
+        // let obj = {
+        //     0:'первый элемент',
+        //     1:'второй элемент',
+        //     2:'последний элемент',
+        //     age:"Вася"
+        // }
+
+        // console.log(arr[0]);
+        // console.log(obj["age"]);
+
+        // console.log(arr[arr.length - 4]);//поиск последнего элемента массива;
+        // arr.length - длина маиссива
+        // arr[100] = "крайний элемент";
+        // delete arr[0];
+        // console.log(arr instanceof Array) 1-й способ определить является ли переменная массивом
+        // console.log(Array.isArray(arr)) 2-й способ определить является ли переменная массивом
+    </script>
+
+    <!-- <script>
+
+    var arr = ['первый элемент', 'второй элемент', 'последний элемент'];
+    document.writeln(arr[0]);              // 'первый элемент'
+    document.writeln('<br>' + arr[1]);              // 'второй элемент'
+    document.writeln('<br>' + arr[arr.length - 1]); // 'последний элемент'
+    
+    document.writeln('<br>' + (arr[arr.length - 1] = 'третий элемент')); // Изменяем значение последнего элемента
+    
+    </> -->
+
+    <!-- <script>
+
+        var arr = [];
+        arr[0] = 0;       // добавили 1-й элемент
+        arr[5] = 5;       // добавили 6-й элемент
+        
+        alert( arr );     // 0,,,,,5
+        alert( arr[1] );  //  undefined
+        
+    </script> -->
+
+    <!-- <script>
+
+        var arr = ['первый элемент', 'второй элемент', 'третий элемент'];
+        delete arr[2];       // Удаляем третий элемент
+         
+        alert("1" in arr);   // true
+        alert("2" in arr);   // false
+        
+    </script> -->
+
+    <!-- Идентификация массивов -->
+
+    <!-- <script>
+
+        var fruits = ["Pear", "Orange", "Apple", "Mango"];
+        
+        alert( typeof fruits );    // object
+        
+    </script> -->
+
+    <!-- <script>
+
+        var fruits = ["Pear", "Orange", "Apple", "Mango"];
+        
+        alert( Array.isArray(fruits) );     // true
+        
+    </script> -->
+    <!-- <script>
+
+        var fruits = ["Pear", "Orange", "Apple", "Mango"];
+        
+        alert( fruits instanceof Array );     //  true
+        
+    </script> -->
+
+    <!-- Свойства массива -->
+
+    Свойство length – длина, или, иными словами, количество элементов в массиве. Значение свойства length всегда на
+    еди­ницу больше, чем самый высокий индекс массива.
+
+
+    <!-- [].length        // => О: массив не имеет элементов 
+[а, Ь, с].length // => З: наибольший индекс равен 2  -->
+
+    <!-- аrr = [1, 2, З, 4, 5];  // Создание массива из 5 элементов
+arr.leпgth = З;         // Теперь массив такой: [1, 2, 3]
+arr.leпgth = О;         // Удаление всех элементов массива
+arr.leпgth = 5;   -->
+
+    <!-- Методы Array -->
+
+    <!-- concat() -->
+
+    Метод для создания массива путем объединения нескольких массивов. Результат получается объединением массива, из
+    которого вызывается метод с массивом или значениями, переданными аргументами методу.
+
+    <!-- array.concat(value1, value2, ..., valueN); -->
+
+    <!-- valueN
+Массивы и/или значения, соединяемые в новый массив. -->
+
+    <!-- Метод concat() создает и возвращает новый массив, являющийся результатом присоединения каждого из его аргументов к массиву. Если какие-либо из аргументов concat() сами являются массивами, то присоединяются элементы этих массивов, а не сами массивы.
+
+В новом массиве сначала идут элементы исходного массива, затем значения переданные в качестве аргументов. Значения добавляются в том порядке, в котором они были переданы методу.
+
+Метод concat() не изменяет исходный массив. -->
+    <!-- <script>
+    let a,b,c;
+    a = [1,2,3]; 
+    b = "dog";
+    c = [[42, "cat"],[44, "t"]];
+    let result = a.concat(b,c);
+    console.log(result)
+    
+</script> -->
+    <!-- <script>
+
+    var a, b, c, d;
+    a = [1,2,3];
+    b = "dog";
+    c = [42, "cat"];
+    
+    d = a.concat(b, c);
+    
+    document.writeln(d); // 1, 2, 3, "dog", 42, "cat"
+    
+</script> -->
+
+    <!-- Array.push() -->
+
+    <!-- array.push(element1, element2, ..., elementN) -->
+
+    <!-- elementN
+    Элементы, добавляемые в конец массива. -->
+
+    <!-- Метод push() добавляет один или более элементов в конец массива и возвращает новую длину массива.
+
+    Метод push() изменяет длину массива.
+        <script>
+             let arr = [1,2,3]; 
+
+             for(let i = 0;i<100;i++){
+                 setTimeout(()=>{
+                     
+                 })
+                 arr.push(i);
+             }
+             console.log(arr)
+        </script> -->
+    <!-- <script>
+
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var total = fruits.push("Kiwi", "Lemon", "Pineapple");
+        
+        alert(fruits); // ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Lemon", "Pineapple"]
+        alert(total);  // 7
+        
+    </script> -->
+    <!-- <script>
+        let arr1 = [1, 2];
+        let arr2 = [3, 4];
+        arr1.push(...arr2);
+        console.log(arr1)
+    </script> -->
+
+<!--     
+    arr1.push(...arr2);
+    console.log(arr1); // [1, 2, 3, 4] -->
+
+
+    <!-- let arr = [];
+for(let i = 1; i <= 5; i++) {
+  arr.push(i);
+}
+console.log(arr); // [1, 2, 3, 4, 5] -->
+
+
+    <!-- Array.pop() -->
+    <!-- 
+    Возвращаемое значение
+    Последний элемент массива или undefined, если массив пуст. -->
+
+    <!-- Метод pop() удаляет последний элемент из массива и возвращает удалённое значение.
+
+    Метод pop() изменяет длину массива. -->
+
+    <!-- <script>
+
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        
+        alert(fruits); // ["Banana", "Orange", "Apple", "Mango"]
+        
+        var popped = fruits.pop();
+        
+        alert(fruits);  // ["Banana", "Orange", "Apple"]
+        
+        alert(popped); // "Mango"
+        
+    </script> -->
+
+    <!-- array.shift() -->
+
+    <!-- Возвращает элемент, удаленный из массива. -->
+
+    <!-- Метод shift() удаляет первый элемент из массива (элемент с индексом 0) и возвращет его значение. Этот метод изменяет длину массива. -->
+
+    
+    <!-- <script>
+
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        
+        let firstEl = fruits.shift();
+        console.log(firstEl);
+        console.log(fruits)
+        
+    </script> -->
+
+    <!-- Array.unshift() -->
+
+    <!-- Параметры
+item1, ..., itemN
+Необязательные параметры. Один, или несколько элементов, перечисленных через запятую, которые будут добавлены в начало массива. -->
+
+    <!-- Метод unshift() вставляет свои аргументы в начало массива, сдвигая существующие элементы к верхним индексам для освобождения места. Первый аргумент shift() становится новым нулевым элементом массива, второй аргумент – новым первым элементом и т. д. -->
+
+    <!-- <script>
+
+    var arr = [1, 2];
+    
+    document.writeln(arr.unshift(0) + '<br>'); // 3 новая длина массива
+    document.writeln(arr+ '<br>'); // [0, 1, 2]
+    
+    document.writeln(arr.unshift(-2, -1) + '<br>'); // 5
+    document.writeln(arr + '<br>'); // [-2, -1, 0, 1, 2]
+    
+    document.writeln(arr.unshift([-3]) + '<br>'); // 6
+    document.writeln(arr); // [[-3], -2, -1, 0, 1, 2]
+    
+</script> -->
+
+    <!-- Array.splice() -->
+
+    <!-- array.splice(start, deleteCount, element1, element2, ..., elementN) -->
+
+    <!-- Параметры
+start
+Индекс элемента массива, с которого будут удалены из массива и/или добавлены в массив элементы. Допускается использование отрицательных значений, в этом случае индекс с которого будет вызван метод будет расчитан по следующей формуле: length (длина массива) + start.
+deleteCount
+Необязательное значение. Целое число, определяющее количество удаляемых из массива элементов, начииная с индекса указанного в start. Если deleteCount равен 0, то элементы не удаляются. Если значение deleteCount больше количества оставшихся элементов в массиве, то будут удалены все элементы до конца массива. Отрицательные значения не допускаются.
+elementN
+Необязательное значение. Добавляемые к массиву элементы. Если вы не укажете никакого элемента, splice() просто удалит элементы из массива. -->
+
+    <!-- Метод splice() удаляет указанное количество элементов массива, начиная с элемента, позиция которого определяется аргументом start, включая его, и заменяет значениями, перечисленными в списке аргументов (element1, ..., elementN). Элементы массива, расположенные после вставляемых или удаляемых элементов, сдвигаются и образуют непрерывную последовательность с остальной частью массива. -->
+
+ <!-- <script>
+     let fruits ="мандарин,помелло,киви";
+     let arr = ["Banana", "Orange", "Apple", "Mango"];
+     arr.splice(1,2,...fruits);
+     console.log(arr);
+ </script> -->
+
+
+
+<!-- var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var removed = fruits.splice(2, 0, 'Lemon');
+
+document.writeln(fruits + '<br>'); // [Banana,Orange,Lemon,Apple,Mango]
+document.writeln(removed); // removed равен [], ничего не удалено -->
+
+</script> -->
+
+    <!-- <script>
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var removed = fruits.splice(2, 1, 'Kiwi');
+
+document.writeln(fruits + '<br>'); // [Banana, Orange, Kiwi, Mango]
+document.writeln(removed);         // [Apple]
+
+</script> -->
+
+    <!-- <script>
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var removed = fruits.splice(2);
+    
+    document.writeln(fruits + '<br>'); // [Banana,Orange]
+     
+    document.writeln(removed);         // [Apple,Mango]
+    
+</script> -->
+
+    <!-- <script>
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var removed = fruits.splice(3, 1);
+
+document.writeln(fruits + '<br>'); // [Banana, Orange, Apple]
+document.writeln(removed);         // [Mango]
+
+</script> -->
+
+    <!-- Array.slice() -->
+
+    <!-- array.slice(start, end) -->
+
+    <!-- Параметры
+start
+Целое число, указывающее с какого индекса начинать выбор элементов (первый элемент имеет индекс 0). Допускается использование отрицательных значений, в этом случае индекс с которого будет произведен выбор элементов расчитывается по следующей формуле: length (длина массива) + start. Если start опущен, то значение по умолчанию будет соответствовать 0.
+end
+Целое число, определяющее индекс по которому заканчивать извлечение элементов массива. Если этот параметр не указан, то будут выбраны все элементы от начальной позиции start и до конца массива. Допускается использование отрицательных значений, в этом случае индекс с которого будет произведен выбор элементов расчитывается по следующей формуле: length (длина массива) + end. -->
+
+    <!-- Метод slice() возвращает новый массив, содержащий элементы массива от элемента, заданного аргументом начало start, до элемента, определяемого аргументом конец end, но не включая его.
+Если аргумент end не указан, возвращаемый массив содержит все элементы от элемента, заданного аргументом start, до конца массива. -->
+    <script>
+        let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        let newArrOfFruits = fruits.slice(-4,-1);
+        console.log(newArrOfFruits);
+    </script>
+    <!-- <script>
+
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var myBest = fruits.slice(-3, -1);  
+
+document.writeln(myBest);    // Lemon, Apple
+
+</script> -->
+
+    <!-- <script>
+
+// Используя slice, создаём newCar из myCar.
+var myAudi = { color: 'белый', wheels: 4 };
+var myCar = [myAudi, 2, '115 л.с.', '4МКПП'];
+var newCar = myCar.slice(0, 2);
+
+// Отображаем цвет myCar, newCar по ссылкам из обоих массивов
+document.writeln('myCar[0].color = ' + myCar[0].color + '<br>');   // белый
+document.writeln('newCar[0].color = ' + newCar[0].color + '<br>'); // белый
+
+// Изменяем цвет myAudi
+myAudi.color = 'серебристый';
+document.writeln('Новый цвет моей Audi - ' + myAudi.color + '<br>'); // серебристый
+
+// Отображаем цвет myHonda по ссылкам из обоих массивов
+document.writeln('myCar[0].color = ' + myCar[0].color + '<br>'); // серебристый
+document.writeln('newCar[0].color = ' + newCar[0].color);        // серебристый
+
+</script> -->
+
+</body>
+
+</html>
