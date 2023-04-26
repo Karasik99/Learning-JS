@@ -387,9 +387,11 @@ function task_30(x){
 
 function task_31(x,num){
     x.forEach(element=>{
-        if(element+element==num){
-            console.log(element)
+        x.forEach(item=>{
+            if(item+element==num){
+            console.log(item+' + '+element +' = ' + num)
         }
+        })
     })
 }
 
