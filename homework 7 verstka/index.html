@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клавиатура</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <button id="ё" class="container__btn" onclick=findclick(id)>ё</button>
+            <button id="1" class="container__btn" onclick=findclick(id)>
+                <sup>!</sup>
+                1</button>
+            <button id="2" class="container__btn" onclick=findclick(id)>
+                <sup>"</sup>
+                2</button>
+            <button id="3" class="container__btn" onclick=findclick(id)>
+                <sup>№</sup>
+                3</button>
+            <button id="4" class="container__btn" onclick=findclick(id)>
+                <sup>;</sup>
+                4</button>
+            <button id="5" class="container__btn" onclick=findclick(id)>
+                <sup>%</sup>
+                5</button>
+            <button id="6" class="container__btn" onclick=findclick(id)>
+                <sup>^</sup>
+                6</button>
+            <button id="7" class="container__btn" onclick=findclick(id)>
+                <sup>&</sup>
+                7</button>
+            <button id="8" class="container__btn" onclick=findclick(id)>
+                <sup>*</sup>
+                8</button>
+            <button id="9" class="container__btn" onclick=findclick(id)> 
+                <sup>(</sup>
+                9</button>
+            <button id="0" class="container__btn" onclick=findclick(id)> 
+                <sup>)</sup>
+                0</button>
+            <button id="-" class="container__btn" onclick=findclick(id)> 
+                <sup>-</sup>
+                -</button>
+            <button id="=" class="container__btn" onclick=findclick(id)>
+                <sup>+</sup>
+                =</button>
+            <button id="Backspace" class="container__btn container__optional__btn container__optional__color"onclick=findclick(id)>Backspace</button>
+
+
+            <button id="tab" class="container__btn container__optional__color"onclick=findclick(id)>Tab</button>
+            <button id="й" class="container__btn" onclick=findclick(id)>Й</button>
+            <button id="ц" class="container__btn" onclick=findclick(id)>Ц</button>
+            <button id="у" class="container__btn" onclick=findclick(id)>У</button>
+            <button id="к" class="container__btn" onclick=findclick(id)>К</button>
+            <button id="е" class="container__btn" onclick=findclick(id)>Е</button>
+            <button id="н" class="container__btn" onclick=findclick(id)>Н</button>
+            <button id="г" class="container__btn" onclick=findclick(id)>Г</button>
+            <button id="ш" class="container__btn" onclick=findclick(id)>Ш</button>
+            <button id="щ" class="container__btn" onclick=findclick(id)>Щ</button>
+            <button id="з" class="container__btn" onclick=findclick(id)>З</button>
+            <button id="х" class="container__btn" onclick=findclick(id)>Х</button>
+            <button id="ъ" class="container__btn" onclick=findclick(id)>Ъ</button>
+            <button id="/" class="container__btn" onclick=findclick(id)>/</button>
+            <button id="del" class="container__btn container__optional__color"onclick=findclick(id)>DEL</button>
+
+
+            <button id="capslock" class="container__btn container__optional__btn container__optional__color"onclick=findclick(id)>CapsLock</button>
+            <button id="ф" class="container__btn" onclick=findclick(id)>Ф</button>
+            <button id="ы" class="container__btn" onclick=findclick(id)>Ы</button>
+            <button id="в" class="container__btn" onclick=findclick(id)>В</button>
+            <button id="а" class="container__btn" onclick=findclick(id)>А</button>
+            <button id="п" class="container__btn" onclick=findclick(id)>П</button>
+            <button id="р" class="container__btn" onclick=findclick(id)>Р</button>
+            <button id="о" class="container__btn" onclick=findclick(id)>О</button>
+            <button id="л" class="container__btn" onclick=findclick(id)>Л</button>
+            <button id="д" class="container__btn" onclick=findclick(id)>Д</button>
+            <button id="ж" class="container__btn" onclick=findclick(id)>Ж</button>
+            <button id="э" class="container__btn" onclick=findclick(id)>Э</button>
+            <button id="enter" class="container__btn container__optional__btn container__optional__color"onclick=findclick(id)>Enter</button>
+
+
+            <button id="lshift" class="container__btn container__optional__btn container__optional__color"onclick=findclick(id)>Shift</button>
+            <button id="/" class="container__btn" onclick=findclick(id)>\</button>
+            <button id="я" class="container__btn" onclick=findclick(id)>Я</button>
+            <button id="ч" class="container__btn" onclick=findclick(id)>Ч</button>
+            <button id="с" class="container__btn" onclick=findclick(id)>С</button>
+            <button id="м" class="container__btn" onclick=findclick(id)>М</button>
+            <button id="и" class="container__btn" onclick=findclick(id)>И</button>
+            <button id="т" class="container__btn" onclick=findclick(id)>Т</button>
+            <button id="ь" class="container__btn" onclick=findclick(id)>Ь</button>
+            <button id="б" class="container__btn" onclick=findclick(id)>Б</button>
+            <button id="ю" class="container__btn" onclick=findclick(id)>Ю</button>
+            <button id="/" class="container__btn" onclick=findclick(id)>/</button>
+            <button id="up" class="container__btn container__optional__color" onclick=findclick(id)>
+                <img src="/img/arrow_up.png" alt="">
+            </button>
+            <button id="rshift" class="container__btn container__optional__color" onclick=findclick(id)>Shift</button>
+            <button id="lctrl" class="container__btn container__ctrl container__optional__color" onclick=findclick(id)>Ctrl</button>
+            <button id="win" class="container__btn container__optional__color" onclick=findclick(id)>Win</button>
+            <button id="lalt" class="container__btn container__optional__color" onclick=findclick(id)>Alt</button>
+            <button id="пробел" class="container__btn container__probel container__optional__color" onclick=findclick(id)></button>
+            <button id="ralt" class="container__btn container__optional__color" onclick=findclick(id)>Alt</button>
+            <button id="rctrl" class="container__btn container__ctrl container__optional__color" onclick=findclick(id)>Ctrl</button>
+            <button id="left" class="container__btn container__optional__color" onclick="findclick(id)">
+                <img class="container__button-left" src="/img/arrow_up.png" alt="">
+            </button>
+            <button id="down" class="container__btn container__optional__color" onclick="findclick(id)">
+                <img  class="container__button-down" src="/img/arrow_up.png" alt="">
+            </button>
+            <button id="right" class="container__btn container__optional__color" onclick="findclick(id)">
+                <img  class="container__button-right" src="/img/arrow_up.png" alt="">
+            </button>
+        </div>
+    </main>
+</body>
+<script src="/app.js"></script>
+</html>
