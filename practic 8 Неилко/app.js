@@ -30,7 +30,6 @@ function Averagetime(auto,distance){
     Дистанция для прохождения равна ${distance} km,
     Время затраченное на поездку будет составлять ${time+Math.floor(h)} часов
     (Исходя из условия того что каждые 4 часа мы будем отдыхать по 1 часу) `)
-
 }
 
 // Averagetime(automobile,880)
@@ -114,8 +113,7 @@ function call(fraction,x,y){
     Reductionfraction(fraction,x,y)
 }
 
-
-call(fraction,20,10)
+// call(fraction,20,10)
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -207,4 +205,4 @@ function callv2(watch){
     Timesec(watch,15)
 }
 
-callv2(watch)
+// callv2(watch)
