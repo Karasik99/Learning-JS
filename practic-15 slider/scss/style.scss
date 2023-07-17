@@ -1,0 +1,108 @@
+.fa {
+    font-size: 18px;
+    padding: 10px;
+    color: rgb(102, 102, 255);
+
+}
+
+.slider {
+    margin: 0 auto;
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 800px;
+    position: relative;
+    background-color: rgb(227, 230, 233);
+    border: 2px solid  rgb(207, 207, 207);
+    border-radius: 16px;
+    &.active{
+        width: 70vw;
+    }
+
+    &_overflow{
+        overflow: hidden;
+    }
+    &__images {
+        position: relative;
+        display: flex;
+        transition: transform 1s ease;
+        margin: 20px 0;
+        background-color: rgb(227, 230, 233);
+        &.no-transform{
+            transition: none;
+        }
+        
+        &_container {
+            min-width: 100%;
+        }
+
+        &_photo {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+    &__gallery{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        &_icon{
+            font-size: 28px;
+            color: white;
+            &:hover{
+                color: rgb(200, 239, 255);
+            }
+        }
+    }
+
+    &__dots {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        &_nav {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 50%;
+            background-color: white;
+            transition: all .5s;
+            &:hover{
+                background-color: rgba(105, 158, 172, 0.26);
+            }
+            &.active{
+                background-color: black;
+            }
+        }
+    }
+
+    &__buttons {
+
+        &_nav {
+            display: flex;
+            justify-content: center;
+            gap: 10%;
+        }
+
+        &_nav-container {
+            border: 2px solid rgb(102, 102, 255);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            transition: all .5s;
+            &:hover{
+                background-color: rgba(105, 158, 172, 0.26);
+            }
+            &:active{
+                background-color: rgba(230, 87, 87, 0.548);
+            }
+        }
+    }
+}
+
