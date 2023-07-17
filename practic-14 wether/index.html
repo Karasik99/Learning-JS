@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="input_in"> 
+        <input class="input" type="text"> 
+    </div> 
+    <div class="cnt"> 
+    
+    </div>
+    
+    <div class="weather-widget center">
+        <div class="center">
+          <h1 id="contry"></h1>
+          <form>
+            <div>
+              <input type="checkbox" id="pure-toggle-4" name="units" value="c" checked hidden/>
+              <label class="pure-toggle brick" for="pure-toggle-4" style="display: flex; justify-content: space-around;
+              align-items: center;">
+                <i class="fa fa-solid fa-f" style="color: aqua; font-size: 28px;"></i>
+                <i class="fa-solid fa-c" style="color: #294370; font-size: 28px;"></i>
+              </label>
+            </div>
+          </form> 
+          <h3>Today</h3>
+          <span>
+              <i id="day-0-icon" class="wi wi-na"></i>
+          </span>
+          <span id="day-0-temp"></span>
+          <p id="desc"></p>
+          
+          <hr>
+          <div class="five-day">
+            <div class="day-1">
+              <h5>wind</h5>
+              <i id="day-1-icon" class="wi wi-na"></i>
+              <span id="day-1-temp"></span>
+            </div>
+            <div class="day-2">
+              <h5>humidity</h5>
+              <i id="day-2-icon" class="wi wi-na"></i>
+              <span id="day-2-temp"></span>
+            </div>
+            <div class="day-3">
+              <h5>pressure</h5>
+              <i id="day-3-icon" class="wi wi-na"></i>
+              <span id="day-3-temp"></span>
+            </div>
+            <div class="day-4">
+              <h5>Visible</h5>
+              <i id="day-4-icon" class="wi wi-na"></i>
+              <span id="day-4-temp"></span>
+            </div>
+          </div>
+        </div>
+        <div class="blur">
+          <img src="https://preview.ibb.co/mLb4J5/dandelion_1737324_960_720.jpg" alt="dandelion_1737324_960_720"  class="bg">
+        </div>
+      </div>
+      <img src="https://preview.ibb.co/mLb4J5/dandelion_1737324_960_720.jpg" alt="dandelion_1737324_960_720" class="bg">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <filter id="blur">
+          <feGaussianBlur stdDeviation="10" />
+        </filter>
+      </svg>
+      <footer>
+        <p>Chrome since April 2016 has disabled the Geolocation API for insecure websites (without https),  so in order to see some data feel free to use firefox or other browser.</p>
+      </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
