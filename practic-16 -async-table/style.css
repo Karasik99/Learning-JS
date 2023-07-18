@@ -1,0 +1,98 @@
+
+
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.container{
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: 650px;
+  height: min-content;
+  border-top: 7px solid #FF8630;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+
+td, th {
+  border: 1px solid #FF8630;
+  border-left-width: 0;
+  padding: 10px 10px 0px 10px;
+  vertical-align: top;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.information{
+  margin-bottom: 40px;
+}
+
+
+.info-btn{
+  padding: 27px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #FF8630;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.posts{
+  text-align: center;
+}
+
+.posts-title{
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.cards{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card{
+  padding: 20px;
+  background-color: #FF8630;
+  border-radius: 15px;
+  max-width: 300px;
+  color: white;
+}
+
+.card-title{
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.card-text{
+  text-align: left;
+  font-size: 17px;
+  text-transform: capitalize;
+
+}
